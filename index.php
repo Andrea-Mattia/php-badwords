@@ -19,12 +19,15 @@
     $name = 'Andrea';
     $text = 'Lorem ipsum foffa dolor sit amet, consectetur foffa';
     $length = strlen($text);
+    $bad_word = $_GET['badword'];
+    $replace = str_replace($bad_word, '***', $text);
     ?>
 
     <header>
         <h1>Welcome <?php echo $name; ?></h1>
         <p>Il testo è: <?php echo $text; ?></p>
         <p>La lungezza del testo: "<?php echo $text; ?>" è: <?php echo $length; ?> caratteri.</p>
+        <p>Il testo censurato è: <?php echo $replace; ?></p>
     </header>
 </body>
 </html>
